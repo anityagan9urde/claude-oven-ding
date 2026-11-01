@@ -1,0 +1,6 @@
+{
+  "name": "claude-oven-ding",
+  "owner": { "name": "Anitya Gangurde" },
+  "description": "Oven-timer ting when Claude is done, double ting when it needs you, phone push when you are away",
+  "plugins": [{ "name": "oven-ding", "source": "./" }]
+}

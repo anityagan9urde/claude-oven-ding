@@ -1,0 +1,39 @@
+{
+  "name": "oven-ding",
+  "version": "0.2.0",
+  "author": { "name": "Anitya Gangurde" },
+  "license": "MIT",
+  "description": "Oven-timer ting when Claude finishes, a double ting when it needs you, phone push when you're away, and a tally of how long Claude waited for you",
+  "userConfig": {
+    "ntfyTopic": {
+      "type": "string",
+      "title": "Phone push: ntfy topic",
+      "description": "Topic name you subscribed to in the ntfy phone app (pick something long and random). Empty = no phone push.",
+      "default": ""
+    },
+    "ntfyServer": {
+      "type": "string",
+      "title": "Phone push: ntfy server",
+      "description": "ntfy server URL",
+      "default": "https://ntfy.sh"
+    },
+    "awayAfterMinutes": {
+      "type": "number",
+      "title": "Away after (minutes)",
+      "description": "You count as away when you haven't typed for this long; then you also get a phone push",
+      "default": 3
+    },
+    "remindAfterMinutes": {
+      "type": "number",
+      "title": "Remind after (minutes)",
+      "description": "If Claude is still waiting on you after this long, ting again and push to your phone",
+      "default": 2
+    },
+    "minTurnSeconds": {
+      "type": "number",
+      "title": "Ding only after turns longer than (seconds)",
+      "description": "Quick replies shorter than this stay silent. 0 = ding after every reply",
+      "default": 0
+    }
+  }
+}
